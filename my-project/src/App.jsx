@@ -11,7 +11,7 @@ function App() {
     <Fragment>
       <Routes>
         <Route path='/' element={<HomePage />}></Route>
-        <Route path='/edit-task' element={<EditTask />}></Route>
+        <Route path='/edit-task/:id' element={<EditTask />}></Route>
       </Routes>
     </Fragment>
   )

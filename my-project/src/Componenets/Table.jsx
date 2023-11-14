@@ -21,7 +21,7 @@ const Table = () => {
     
     const getAllTask = async () => {
         const tasks = await axios.get("http://localhost:3000/api/v1/all-tasks")
-        // console.log(tasks.data.tasks);
+        console.log(tasks.data.tasks);
         setTask(tasks)
     }
 
@@ -53,7 +53,7 @@ const Table = () => {
                             <td>{task.email}</td>
                             <td>{task.mobileNo}</td>
                             <td>{task.project}</td>
-                            <td><button onClick={() => navigate("/edit-task", {state: task})}>Edit</button></td> | 
+                            <td><button onClick={() => navigate(`/edit-task/${task._id}`)}>Edit</button></td> | 
                             <td><button onClick={() => handleDelete(task._id)}>Delete</button></td>
                         </tr>
                     )

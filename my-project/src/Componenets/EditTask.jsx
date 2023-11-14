@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React from 'react'
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-const EditTask = () => {
+const EditTask = (props) => {
     const navigate = useNavigate()
-    const {state} = useLocation()
-    console.log("hdjnfd", state);
+    const {id} = useParams()
+    // console.log(id);
     const [task, setTaask] = useState({
         name: "",
         lastName: "",
