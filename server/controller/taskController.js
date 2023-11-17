@@ -106,3 +106,25 @@ export const allTasks = async (req, res) => {
         })
     }
 }
+
+export const singleTask = async (req, res) => {
+    const {id} = req.params
+
+    if (!id) {
+        return res.json({
+            message: "Task not fond"
+        })
+    }
+
+    try {
+        const task = await Task.findById(id)
+
+        return res.json({
+            message: "Task get successfully",
+            status: 202,
+            task
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
