@@ -159,7 +159,7 @@ const Table = () => {
                                                 required
                                             />
                                         </div>
-                                        {JSON.stringify(preTask)}
+                                        
                                         <div className="w-full">
                                             <Button onClick={() => handleOnSubmmit(task._id)}>Done</Button>
                                         </div>
